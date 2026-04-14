@@ -15,7 +15,7 @@ GitHub / local repo
         │
         ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Ingestion Pipeline (7 stages)                               │
+│  Ingestion Pipeline (7 stages)                              │
 │  clone → parse code → parse commits → fetch PRs →           │
 │  build TKG → embed → build BM25                             │
 └───────────────┬─────────────────┬───────────────────────────┘
@@ -251,13 +251,3 @@ To answer *"when did function X change"*: traverse `MODIFIES` edges from Functio
 To answer *"why was X changed"*: from those Commits, follow `REFERENCES` to PRs, read PR descriptions. Two hops.
 
 ---
-
-## Demo
-
-The recommended demo repo is **[etcd-io/etcd](https://github.com/etcd-io/etcd)** — a Go distributed key-value store with rich PR history going back to 2013, including the famous v2 → v3 architectural migration from HTTP/JSON to gRPC.
-
-**Recommended scope:** date range 2015–2018, Raft subsystem subdirectory.
-
-**Demo question:** *"Why did etcd move from its v2 HTTP API to gRPC in v3?"*
-
-The answer lives entirely in PR discussions and commit messages from 2016–2017. Gitlore retrieves the real architectural decision with citations, demonstrating exactly what the TKG + hybrid RAG pipeline is built for.
