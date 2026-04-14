@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+
+# Environment / secrets
+backend/.env
+frontend/.env
+.claude/
+.claude/settings.local.json
+
+# Backend data (database files)
+backend/data/
+
+# Cloned repos (temporary clone dir used by ingestion pipeline)
+/tmp/gitlore_clones/
+
+# Frontend build output
+frontend/dist/
+frontend/node_modules/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
